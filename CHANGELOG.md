@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 - 2026-10-24
+
+- The integration has its own icon, in the `brand` folder. Home Assistant
+  2026.3 and newer show it on the integration card.
+- The HACS check runs without exceptions.
+
 ## 0.1.0 - 2026-10-24
 
 First public release.

@@ -11,5 +11,5 @@
   "loggers": ["custom_components.enocean_internal_chip"],
   "requirements": ["pyserial==3.5"],
   "single_config_entry": true,
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

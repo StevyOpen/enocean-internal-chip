@@ -8,7 +8,7 @@ from homeassistant.const import Platform
 
 DOMAIN: Final = "enocean_internal_chip"
 NAME: Final = "EnOcean Internal Chip"
-VERSION: Final = "0.1.0"
+VERSION: Final = "0.1.1"
 
 CONF_PORT: Final = "port"
 

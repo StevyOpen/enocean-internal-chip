@@ -1,5 +1,7 @@
 # EnOcean Internal Chip
 
+<img src="custom_components/enocean_internal_chip/brand/icon.png" alt="" width="96" align="right">
+
 A Home Assistant integration for EnOcean devices, through a USB stick or a
 module built into the hub, as long as it speaks the ESP3 serial protocol.
 

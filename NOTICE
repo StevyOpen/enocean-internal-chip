@@ -1,0 +1,17 @@
+EnOcean Internal Chip
+Copyright 2026 StevyOpen contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It started from the "enocean" integration of Home Assistant
+(https://github.com/home-assistant/core), Copyright Home Assistant
+contributors, licensed under the Apache License, Version 2.0, and has since
+been rewritten.
+
+The test suite uses the "enocean" Python library
+(https://github.com/kipe/enocean, MIT License) to compare profile decoders.
+That library is not part of the integration and is not distributed with it.
+
+EnOcean is a registered trademark of EnOcean GmbH. This project is not
+affiliated with, endorsed by or sponsored by EnOcean GmbH or the EnOcean
+Alliance.

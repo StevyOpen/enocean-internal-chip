@@ -1,0 +1,59 @@
+simulate:
+  fields:
+    preset:
+      required: true
+      example: rocker_a0
+      selector:
+        select:
+          translation_key: preset
+          options:
+            - rocker_a0
+            - rocker_ai
+            - rocker_b0
+            - rocker_bi
+            - rocker_release
+            - push_press
+            - push_release
+            - button_short
+            - button_double
+            - button_long
+            - contact_open
+            - contact_closed
+            - window_closed
+            - window_tilted
+            - window_open
+            - window_vibration
+            - handle_closed
+            - handle_tilted
+            - handle_open
+            - temperature
+            - temperature_humidity
+            - motion_on
+            - motion_off
+            - smoke_alarm
+            - smoke_clear
+            - smoke_battery
+            - switch_on
+            - switch_off
+            - switch_power
+            - switch_energy
+            - cover_position
+            - meter_power
+            - meter_energy
+            - teach_in_ute
+            - teach_in_4bs
+    sender:
+      required: false
+      example: "05:00:00:01"
+      selector:
+        text:
+open_pairing:
+  fields:
+    seconds:
+      required: false
+      default: 180
+      selector:
+        number:
+          min: 10
+          max: 600
+          unit_of_measurement: s

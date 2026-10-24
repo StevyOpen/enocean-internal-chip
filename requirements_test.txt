@@ -1,0 +1,3 @@
+pytest-homeassistant-custom-component==0.13.316
+enocean==0.50.0
+ruff==0.17.2

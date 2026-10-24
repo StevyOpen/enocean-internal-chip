@@ -1,0 +1,77 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "rain": {
+        "default": "mdi:weather-rainy",
+        "state": {
+          "off": "mdi:weather-cloudy"
+        }
+      },
+      "rocker_state_a": {
+        "default": "mdi:light-switch-off",
+        "state": {
+          "on": "mdi:light-switch"
+        }
+      },
+      "rocker_state_b": {
+        "default": "mdi:light-switch-off",
+        "state": {
+          "on": "mdi:light-switch"
+        }
+      },
+      "button_toggle": {
+        "default": "mdi:toggle-switch-off-outline",
+        "state": {
+          "on": "mdi:toggle-switch"
+        }
+      }
+    },
+    "sensor": {
+      "supply_voltage": {
+        "default": "mdi:sine-wave"
+      },
+      "window_position": {
+        "default": "mdi:window-closed-variant",
+        "state": {
+          "tilted": "mdi:window-open",
+          "open": "mdi:window-open-variant"
+        }
+      },
+      "handle_position": {
+        "default": "mdi:window-closed-variant",
+        "state": {
+          "tilted": "mdi:window-open",
+          "open": "mdi:window-open-variant"
+        }
+      },
+      "gas_flow": {
+        "default": "mdi:meter-gas"
+      },
+      "water_flow": {
+        "default": "mdi:water"
+      }
+    },
+    "event": {
+      "rocker_event_a": {
+        "default": "mdi:light-switch"
+      },
+      "rocker_event_b": {
+        "default": "mdi:light-switch"
+      },
+      "push_event": {
+        "default": "mdi:gesture-tap-button"
+      },
+      "button_event": {
+        "default": "mdi:gesture-double-tap"
+      }
+    }
+  },
+  "services": {
+    "simulate": {
+      "service": "mdi:flask-outline"
+    },
+    "open_pairing": {
+      "service": "mdi:link-variant"
+    }
+  }
+}

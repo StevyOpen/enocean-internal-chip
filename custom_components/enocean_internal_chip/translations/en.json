@@ -1,0 +1,216 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose the EnOcean module",
+        "description": "These modules answered on the serial ports of this system. Pick the one to use.",
+        "data": {
+          "port": "Module"
+        }
+      },
+      "manual": {
+        "title": "Serial port of the EnOcean module",
+        "description": "Enter the serial port of the USB stick or of the built-in module, for example /dev/ttyUSB0. A path under /dev/serial/by-id/ keeps working when the system renumbers its USB ports.",
+        "data": {
+          "port": "Serial port"
+        }
+      },
+      "reconfigure": {
+        "title": "Change the serial port",
+        "description": "Use this after moving or replacing the USB stick. Adopted devices stay as they are. A new module has a different address: one-way actuators must then be paired again.",
+        "data": {
+          "port": "Serial port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No EnOcean module answered on this port. Check the port name, and that no other program or add-on is using it."
+    },
+    "abort": {
+      "already_configured": "This EnOcean module is already set up.",
+      "single_instance_allowed": "EnOcean Internal Chip is already set up. Only one module can be used.",
+      "reconfigure_successful": "The serial port has been changed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "EnOcean Internal Chip options",
+        "data": {
+          "auto_labels": "Label new entities by type",
+          "role_labels": "Also label entities by role",
+          "notify_teach_in": "Notify about new devices",
+          "allow_simulation": "Allow simulated telegrams"
+        },
+        "data_description": {
+          "auto_labels": "New entities get a label such as Doors & windows, Climate or Buttons. Entities that already have labels are left alone.",
+          "role_labels": "Doors and windows also get Perimeter, motion sensors Interior, smoke and CO alarms 24/7 safety.",
+          "notify_teach_in": "Show a notification when a device that is not adopted yet sends a teach-in telegram.",
+          "allow_simulation": "Lets the panel and the simulate action inject test telegrams. Turn it off when you are done testing."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "rain": {
+        "name": "Rain"
+      },
+      "rocker_state_a": {
+        "name": "Rocker A"
+      },
+      "rocker_state_b": {
+        "name": "Rocker B"
+      },
+      "button_toggle": {
+        "name": "Toggle"
+      }
+    },
+    "sensor": {
+      "supply_voltage": {
+        "name": "Supply voltage"
+      },
+      "window_position": {
+        "name": "Window position",
+        "state": {
+          "closed": "Closed",
+          "tilted": "Tilted",
+          "open": "Open"
+        }
+      },
+      "handle_position": {
+        "name": "Handle position",
+        "state": {
+          "closed": "Closed",
+          "tilted": "Tilted",
+          "open": "Open"
+        }
+      },
+      "gas_flow": {
+        "name": "Gas flow"
+      },
+      "water_flow": {
+        "name": "Water flow"
+      }
+    },
+    "event": {
+      "rocker_event_a": {
+        "name": "Rocker A",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "press_0": "Upper button (0) pressed",
+              "release_0": "Upper button (0) released",
+              "press_i": "Lower button (I) pressed",
+              "release_i": "Lower button (I) released"
+            }
+          }
+        }
+      },
+      "rocker_event_b": {
+        "name": "Rocker B",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "press_0": "Upper button (0) pressed",
+              "release_0": "Upper button (0) released",
+              "press_i": "Lower button (I) pressed",
+              "release_i": "Lower button (I) released"
+            }
+          }
+        }
+      },
+      "push_event": {
+        "name": "Push",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "press": "Pressed",
+              "release": "Released"
+            }
+          }
+        }
+      },
+      "button_event": {
+        "name": "Press",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "short_press": "Short press",
+              "double_press": "Double press",
+              "long_press": "Long press",
+              "long_release": "Long press released"
+            }
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "preset": {
+      "options": {
+        "rocker_a0": "Rocker A, upper button pressed",
+        "rocker_ai": "Rocker A, lower button pressed",
+        "rocker_b0": "Rocker B, upper button pressed",
+        "rocker_bi": "Rocker B, lower button pressed",
+        "rocker_release": "Rocker released",
+        "push_press": "Push button pressed",
+        "push_release": "Push button released",
+        "button_short": "Button short press, battery 90 %",
+        "button_double": "Button double press",
+        "button_long": "Button long press",
+        "contact_open": "Contact open",
+        "contact_closed": "Contact closed",
+        "window_closed": "Window closed",
+        "window_tilted": "Window tilted",
+        "window_open": "Window open",
+        "window_vibration": "Window closed, vibration alarm",
+        "handle_closed": "Handle closed",
+        "handle_tilted": "Handle tilted",
+        "handle_open": "Handle open",
+        "temperature": "Temperature 21.5 °C",
+        "temperature_humidity": "22.4 °C, humidity 55.2 %",
+        "motion_on": "Motion detected",
+        "motion_off": "No motion",
+        "smoke_alarm": "Smoke alarm",
+        "smoke_clear": "Smoke alarm cleared",
+        "smoke_battery": "Smoke detector battery low",
+        "switch_on": "Switch reports on",
+        "switch_off": "Switch reports off",
+        "switch_power": "Switch reports 120 W",
+        "switch_energy": "Switch reports 12.5 kWh",
+        "cover_position": "Shutter reports 40 % open",
+        "meter_power": "Electricity meter 1500 W",
+        "meter_energy": "Electricity meter 1234.5 kWh",
+        "teach_in_ute": "Pairing request from a two-way switch (D2-01-12)",
+        "teach_in_4bs": "Teach-in from a temperature sensor (A5-02-05)"
+      }
+    }
+  },
+  "services": {
+    "simulate": {
+      "name": "Simulate a telegram",
+      "description": "Feeds a ready-made telegram to the integration as if a device had sent it. Needs the Allow simulated telegrams option.",
+      "fields": {
+        "preset": {
+          "name": "Telegram",
+          "description": "Which telegram to simulate."
+        },
+        "sender": {
+          "name": "Sender ID",
+          "description": "The device ID the telegram comes from, like 05:00:00:01. Leave empty for the default ID of the telegram."
+        }
+      }
+    },
+    "open_pairing": {
+      "name": "Open pairing",
+      "description": "Lets two-way devices pair with the gateway for a while. Put the device into learn mode while pairing is open.",
+      "fields": {
+        "seconds": {
+          "name": "Duration",
+          "description": "How long pairing stays open, from 10 to 600 seconds. 180 seconds if left empty."
+        }
+      }
+    }
+  }
+}
